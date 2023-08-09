@@ -5,9 +5,10 @@ const testBtn = document.getElementById("buttonRequest");
 const testArea = document.getElementById("textArea1");
 
 function testFunction() {
-    let test = new testHttpRequest("asdf");
-    let respText = JSON.stringify(test.request());
-    testArea.textContent = respText;
+    let test = new testHttpRequest("http://www.asdf.com");
+    let testText = test.request().toString();
+    console.log("testFuncLog: "+testText);
+    testArea.textContent = testText;
 }
 
 testBtn.addEventListener("click",testFunction);
